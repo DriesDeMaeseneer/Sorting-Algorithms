@@ -38,6 +38,17 @@ class NTree:
 
         return self.toReturn
 
+    def inorder(self):
+        # print(self.root[0],self.subTrees)
+        if self.subTrees==[]:
+            return
+        else:
+
+            self.subTrees[0].inorder()
+            print(self.root[0].id)
+            self.subTrees[1].inorder()
+            return self.root[0]
+
     def maxinlist(self,list):
         a=-10e10
         for i in list:
@@ -45,14 +56,14 @@ class NTree:
                 a=i
         return a
 
-    def height(self):
+    def hoogte(self):
         comparisonlist = []
 
         if self.subTrees == []:
             return 1
 
         for i in self.subTrees:
-            comparisonlist.append(i.height())
+            comparisonlist.append(i.hoogte())
         return (1 + self.maxinlist(comparisonlist))
 
     def insert(self,node):

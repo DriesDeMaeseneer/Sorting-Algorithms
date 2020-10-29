@@ -8,4 +8,7 @@ def TreeSort(array):
     # All items will be inserted into a binary tree.
 
     for i in array:
+    # insert all the items into the tree, one by one.
         a.insert(treenode(i))
+    # call the method inorder() in lib BinTree to print out the sorted version
+    a.inorder()
