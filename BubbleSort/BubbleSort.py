@@ -1,10 +1,9 @@
 #!/bin/python3
-
+"""
+The function BubbleSort will sort an array with the bubble sort method.
+The return of the function is the sorted version of the array.
+"""
 def BubbleSort(array):
-    """
-    The function BubbleSort will sort an array with the bubble sort method.
-    The return of the function is the sorted version of the array.
-    """
     # Looping over all the items
     for i in range(len(array)-1):
         for j in range(len(array) - 1-i):
