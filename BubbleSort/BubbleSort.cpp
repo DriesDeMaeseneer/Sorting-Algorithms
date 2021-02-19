@@ -1,6 +1,9 @@
-#include <vector>
+#include "BubbleSort.h"
 
-std::vector<int> BubbleSort(std::vector<int> vectortosort){
+void BubbleSort(std::vector<int>& vectortosort){
+    if(vectortosort.empty()){
+        return;
+    }
     for(int i = 0;i<vectortosort.size()-1;i++){
         for (int j = 0; j<vectortosort.size()-1-i;j++){
             if (vectortosort[j]>vectortosort[j+1]){
@@ -10,8 +13,4 @@ std::vector<int> BubbleSort(std::vector<int> vectortosort){
             }
         }
     }
-    return vectortosort;
-}
-int main(){
-    return 0;
 }
